@@ -74,11 +74,6 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
       }   
   };
 
-
-
-  //$scope.getCoordinates();
-
-
   angular.extend($scope, {
     center: {
       latitude: $scope.latitude, // initial map center latitude
