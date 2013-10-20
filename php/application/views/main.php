@@ -1,7 +1,8 @@
 <?php
 $this->load->view('inc/header');
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
  // This example adds a marker to indicate the position
 // of Bondi Beach in Sydney, Australia
 function initialize() {
