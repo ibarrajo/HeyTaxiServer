@@ -33,7 +33,7 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
     return true;
   };
 
-  $scope.setCoordinates = function() {
+  $scope.setCoordinates = function(position) {
        $scope.latitude = position.coords.latitude;
        $scope.longitude = position.coords.longitude; 
   };

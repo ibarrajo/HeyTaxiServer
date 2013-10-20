@@ -14,7 +14,7 @@ $this->load->view('inc/header');
 	<div data-ng-app="gotaxi">
 		<div data-ng-controller="GoTaxiCtrl">
 			<google-map center="center" id="map-canvas"  draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px"></google-map>
-			<button data-ng-click="getCoordinates()">Get Coordinates</button>
+			<button data-ng-click="getCoordinates()">Get Coordinates</button><span>Lat:{{latitude}} Long: {{longitude}}</span>
 		</div>
 	</div>
 
