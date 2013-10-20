@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		redirect('http://signup.eytaxy.co/');
+		redirect('http://signup.eytaxi.co/');
 	}
 }
 
