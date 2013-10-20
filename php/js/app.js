@@ -14,6 +14,8 @@ function GoTaxiCtrl($scope, $http) {
 
   // get coordiantes
   $scope.getCoordinates = function() {
+    $scope.latitude = "?";
+    $scope.longitude = "?";
     $scope.latitude = Android.getLatitude();
     $scope.longitude = Android.getLongitude();
   };
