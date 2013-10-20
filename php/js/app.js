@@ -19,9 +19,9 @@ function GoTaxiCtrl($scope, $http) {
     coordinates.latitude = Android.getLatitude();
     coordinates.longitude = Android.getLongitude();
 
-    $('#debug').text(JSON.stringify(coordinates));
-    Android.showToast(JSON.stringify(coordinates));
-    alert(JSON.stringify(coordinates));
+    $('#debug').text(JSON.stringify(coordinates) + " === " +  coordinates);
+    Android.showToast(JSON.stringify(coordinates) + " === " +  coordinates);
+    alert(JSON.stringify(coordinates) + " === " +  coordinates);
   };
 
 
