@@ -10,8 +10,6 @@ $this->load->view('inc/header');
     display: block;
   }
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-
 <body>
 	<div data-ng-app>
 		<div data-ng-controller="GoTaxiCtrl">
