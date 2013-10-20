@@ -15,14 +15,14 @@ $this->load->view('inc/header');
 function initialize() {
 var mapOptions = {
 zoom: 4,
-center: new google.maps.LatLng(-33, 151),
+center: new google.maps.LatLng(latitude, longitude),
 mapTypeId: google.maps.MapTypeId.ROADMAP
 }
 var map = new google.maps.Map(document.getElementById('map-canvas'),
                             mapOptions);
 
 var image = 'img/beachflag.png';
-var myLatLng = new google.maps.LatLng(-33.890542, 151.274856);
+var myLatLng = new google.maps.LatLng(latitude, longitude);
 var beachMarker = new google.maps.Marker({
   position: myLatLng,
   map: map,
@@ -36,17 +36,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <body>
 	<div data-ng-app>
 		<div data-ng-controller="GoTaxiCtrl">
-
-			<div class="container">
-
-				<span>LAT:{{latitude}} LONG:{{longitude}}</span>
-				<button data-ng-click="getCoordinates()">Get Coordinates</button>
-				<br>
-				<hr>
-				<br>
-				<div id="map-canvas"></div>
-			</div>
-
+			<div id="map-canvas"></div>
+			<button data-ng-click="getCoordinates()">Get Coordinates</button>
 		</div>
 	</div>
 
