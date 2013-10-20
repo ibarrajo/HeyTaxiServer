@@ -13,7 +13,7 @@ $this->load->view('inc/header');
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
 <body>
-	<div data-ng-app="gotaxi">
+	<div data-ng-app>
 		<div data-ng-controller="GoTaxiCtrl">
 			<google-map center="center" id="map-canvas"  draggable="true" zoom="zoom" markers="markers" mark-click="true" style="height: 400px"></google-map>
 			<button data-ng-click="getCoordinates()">Get Coordinates</button>

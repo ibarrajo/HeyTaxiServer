@@ -1,6 +1,5 @@
-angular.module('gotaxi', ['google-maps');
- 
-var GoTaxiCtrl = function ($scope, $http) {
+
+var GoTaxiCtrl = function ($scope, $http, google-maps) {
 
   // read
   $scope.getInventory = function() {
@@ -71,5 +70,6 @@ var GoTaxiCtrl = function ($scope, $http) {
     zoom: 8, // the zoom level
   });
 
-}
+};
 
+GoTaxiCtrl.$inject = ['$scope', '$http', 'google-maps'];
