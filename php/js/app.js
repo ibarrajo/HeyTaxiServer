@@ -1,4 +1,6 @@
-function GoTaxiCtrl($scope, $http) {
+angular.module('gotaxi', ['google-maps');
+ 
+var GoTaxiCtrl = function ($scope, $http) {
 
   // read
   $scope.getInventory = function() {
@@ -71,5 +73,3 @@ function GoTaxiCtrl($scope, $http) {
 
 }
 
-// which services to inject ?
-GoTaxiCtrl.$inject = ['google-maps'];
