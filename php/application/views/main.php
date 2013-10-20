@@ -7,7 +7,7 @@ $this->load->view('inc/header');
 
 			<div class="container">
 
-				<span id="debug"></span>
+				<span>LAT:{{latitude}} LONG:{{longitude}}</span>
 				<button data-ng-click="getCoordinates()">Get Coordinates</button>
 			</div>
 
