@@ -2,6 +2,7 @@
 
 class Welcome extends CI_Controller {
 
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -19,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		redirect('http://signup.eytaxy.co/');
 	}
 }
 
