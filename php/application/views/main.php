@@ -8,6 +8,7 @@ $this->load->view('inc/header');
 			<div class="container">
 
 				<span id="debug"></span>
+				<button data-ng-click="getCoordinates()">Get Coordinates</button>
 			</div>
 
 		</div>
