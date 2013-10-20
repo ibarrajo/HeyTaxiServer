@@ -1,4 +1,6 @@
-function GoTaxiCtrl($scope, $http, google-maps) {
+var goTaxi = angular.module('gotaxi', ["google-maps"]);
+ 
+goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
 
   // read
   $scope.getInventory = function() {
@@ -69,7 +71,5 @@ function GoTaxiCtrl($scope, $http, google-maps) {
     zoom: 8, // the zoom level
   });
 
-}
- 
-// The 'ng-controller' directive does this behind the scenes
-injector.instantiate(GoTaxiCtrl);
+
+}]);
