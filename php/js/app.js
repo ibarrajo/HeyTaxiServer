@@ -16,6 +16,7 @@ function GoTaxiCtrl($scope, $http) {
   $scope.getCoordinates = function() {
     $('#debug').text(Android.getCoordinates());
     Android.showToast(Android.getCoordinates());
+    alert("Something");
   };
 
 
