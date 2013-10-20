@@ -29,6 +29,8 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
     else {
        navigator.geolocation.getCurrentPosition($scope.setCoordinates);
     }
+    // I forgot why i put this return here =/
+    return true;
   };
 
   $scope.setCoordinates = function() {
@@ -51,13 +53,6 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
 
   $scope.markerLat = null;
   $scope.markerLng = null;
-
-  // get coordiantes
-  $scope.getCoordinates = function() {
-    $scope.latitude = Android.getLatitude();
-    $scope.longitude = Android.getLongitude();
-    return true;
-  };
 
  $scope.geolocationAvailable = $scope.getCoordinates() ? true : false;
 
