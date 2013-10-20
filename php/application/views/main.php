@@ -7,7 +7,7 @@ $this->load->view('inc/header');
 
 			<div class="container">
 
-
+				<span id="debug"></span>
 			</div>
 
 		</div>

@@ -11,6 +11,13 @@ function GoTaxiCtrl($scope, $http) {
       );
   };
 
+
+  // get coordiantes
+  $scope.getCoordinates = function() {
+    $('#debug').text(JSON.stringify(Android.getCoordinates()));
+  };
+
+
   // update
   $scope.editProduct = function(item) {
     
@@ -26,5 +33,5 @@ function GoTaxiCtrl($scope, $http) {
     
   };
 
-  $scope.getInventory();
+  $scope.getCoordinates();
 }
