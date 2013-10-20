@@ -2,8 +2,9 @@
 $this->load->view('inc/header');
 ?>
 <style>
-  html, body, #map-canvas {
+  #map-canvas {
     height: 100%;
+    width: 100%;
     margin: 0px;
     padding: 0px
   }
@@ -14,14 +15,14 @@ $this->load->view('inc/header');
 // of Bondi Beach in Sydney, Australia
 function initialize() {
 var mapOptions = {
-zoom: 4,
-center: new google.maps.LatLng(latitude, longitude),
+zoom: 8,
+center: new google.maps.LatLng(32.5250, 117.0333),
 mapTypeId: google.maps.MapTypeId.ROADMAP
 }
 var map = new google.maps.Map(document.getElementById('map-canvas'),
                             mapOptions);
 
-var image = 'img/beachflag.png';
+var image = base_url + 'img/beachflag.png';
 var myLatLng = new google.maps.LatLng(latitude, longitude);
 var beachMarker = new google.maps.Marker({
   position: myLatLng,
