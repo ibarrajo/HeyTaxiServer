@@ -6,7 +6,8 @@ $this->load->view('inc/header');
     height: 100%;
     width: 100%;
     margin: 0px;
-    padding: 0px
+    padding: 0px;
+    display: block;
   }
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>

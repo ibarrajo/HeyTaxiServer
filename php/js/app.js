@@ -57,10 +57,19 @@ function GoTaxiCtrl($scope, $http) {
 
 
 
-  $scope.getCoordinates();
+  //$scope.getCoordinates();
 
+
+  angular.extend($scope, {
+    center: {
+      latitude: 0, // initial map center latitude
+      longitude: 0, // initial map center longitude
+    },
+    markers: [], // an array of markers,
+    zoom: 8, // the zoom level
+  });
 
 }
 
 // which services to inject ?
-GoTaxiCtrl.$inject = ['google-maps', '$log'];
+GoTaxiCtrl.$inject = ['google-maps'];
