@@ -1,4 +1,9 @@
 var goTaxi = angular.module('gotaxi', ["google-maps"]);
+
+function isAndroid()
+{
+  return (typeof Android === "undefined") ? false : true;
+}
  
 goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
 
@@ -13,6 +18,23 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
       );
   };
 
+  $scope.getCoordinates = function() {
+    if (isAndroid()) {
+      var cor = JSON.parse(Android.getCoordinates());
+      $scope.latitude = cor.latitude;
+      $scope.longitude = cor.longitude; 
+      if ($scope.latitude == 0 && $scope.longitude == 0)
+        setTimeout( $scope.getCoordinates, 1000);
+    }
+    else {
+       navigator.geolocation.getCurrentPosition($scope.setCoordinates);
+    }
+  };
+
+  $scope.setCoordinates = function() {
+       $scope.latitude = position.coords.latitude;
+       $scope.longitude = position.coords.longitude; 
+  };
 
  // default location
   $scope.center = {
@@ -64,11 +86,11 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
 
   angular.extend($scope, {
     center: {
-      latitude: 0, // initial map center latitude
-      longitude: 0, // initial map center longitude
+      latitude: $scope.latitude, // initial map center latitude
+      longitude: $scope.longitude, // initial map center longitude
     },
     markers: [], // an array of markers,
-    zoom: 8, // the zoom level
+    zoom: 17, // the zoom level
   });
 
 
