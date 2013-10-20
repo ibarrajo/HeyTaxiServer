@@ -74,6 +74,11 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
       }   
   };
 
+  $scope.playHorn = function () {
+    var clickSound = new Audio(base_url + 'sound/horn.mp3');
+    clickSound.play();
+  };
+
   angular.extend($scope, {
     center: {
       latitude: $scope.latitude, // initial map center latitude
