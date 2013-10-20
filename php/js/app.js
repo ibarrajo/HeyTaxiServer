@@ -14,9 +14,14 @@ function GoTaxiCtrl($scope, $http) {
 
   // get coordiantes
   $scope.getCoordinates = function() {
-    $('#debug').text(JSON.stringify(Android.getCoordinates()));
-    Android.showToast(JSON.stringify(Android.getCoordinates()));
-    alert(JSON.stringify(Android.getCoordinates()));
+    var coordinates;
+
+    coordinates.latitude = Android.getLatitude();
+    coordinates.longitude = Android.getLongitude();
+
+    $('#debug').text(JSON.stringify(coordinates));
+    Android.showToast(JSON.stringify(coordinates));
+    alert(JSON.stringify(coordinates));
   };
 
 
