@@ -75,8 +75,9 @@ goTaxi.controller('GoTaxiCtrl', ['$scope', function($scope) {
   };
 
   $scope.playHorn = function () {
-    var clickSound = new Audio(base_url + 'sound/horn.mp3');
-    clickSound.play();
+    var horn = new Audio(base_url + 'sound/horn.mp3');
+    horn.setVolume(0.5);
+    horn.play();
   };
 
   angular.extend($scope, {
